@@ -1,0 +1,19 @@
+package com.cooksys.day_3;
+
+public class Example {
+	
+	private Object a;
+	
+	public Example (Object a) {
+		this.a = a;
+	}
+
+	public Object getA() {
+		return a;
+	}
+
+	public void setA(Object a) {
+		this.a = a;
+	}
+
+}

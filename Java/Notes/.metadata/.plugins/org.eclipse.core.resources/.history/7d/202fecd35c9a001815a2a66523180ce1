@@ -1,0 +1,14 @@
+package com.cooksys.day_2;
+
+public class Percusion extends Instrument {
+
+	public Percusion() {
+		super(300);
+	}
+
+	@Override
+	public void play(Instrument i) {
+		System.out.println("Percusion is playing");
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.cooksys.day_1;
+
+public class ParkingLot {
+	private static String name;
+	private ParkingSpace space;
+	
+	public ParkingLot () {
+		
+	}
+	
+	public ParkingLot (String name) {
+		this.name = name;
+	}
+	
+	public ParkingLot (String name, ParkingSpace space) {
+		this.name = name;
+		this.space = space;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ParkingSpace getSpace() {
+		return space;
+	}
+
+	public void setSpace(ParkingSpace space) {
+		this.space = space;
+	}
+
+}

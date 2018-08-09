@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/alex/src/main/alex.iml" filepath="$PROJECT_DIR$/alex/src/main/alex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alex/src/test/alex-test.iml" filepath="$PROJECT_DIR$/alex/src/test/alex-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/donny/src/main/donny.iml" filepath="$PROJECT_DIR$/donny/src/main/donny.iml" />
+      <module fileurl="file://$PROJECT_DIR$/donny/src/test/donny-test.iml" filepath="$PROJECT_DIR$/donny/src/test/donny-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jacob/src/main/jacob.iml" filepath="$PROJECT_DIR$/jacob/src/main/jacob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jacob/src/test/jacob-test.iml" filepath="$PROJECT_DIR$/jacob/src/test/jacob-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jamil/src/main/jamil.iml" filepath="$PROJECT_DIR$/jamil/src/main/jamil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jamil/src/test/jamil-test.iml" filepath="$PROJECT_DIR$/jamil/src/test/jamil-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kirk/src/main/kirk.iml" filepath="$PROJECT_DIR$/kirk/src/main/kirk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kirk/src/test/kirk-test.iml" filepath="$PROJECT_DIR$/kirk/src/test/kirk-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zac/src/main/zac.iml" filepath="$PROJECT_DIR$/zac/src/main/zac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zac/src/test/zac-test.iml" filepath="$PROJECT_DIR$/zac/src/test/zac-test.iml" />
+    </modules>
+  </component>
+</project>

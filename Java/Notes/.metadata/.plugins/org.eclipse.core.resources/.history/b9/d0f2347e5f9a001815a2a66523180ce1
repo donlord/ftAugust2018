@@ -1,0 +1,7 @@
+package com.cooksys.day_2.composition;
+
+public class ParkingLot {
+	
+	private ParkingSpace space;
+
+}

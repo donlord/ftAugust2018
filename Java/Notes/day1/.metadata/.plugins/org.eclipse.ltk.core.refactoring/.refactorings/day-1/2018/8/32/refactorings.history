@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;day-1&apos;&#x0A;- Original project: &apos;day-1&apos;&#x0A;- Original element: &apos;day-1/src/main/java/com.cooksys.day_2&apos;" description="Delete element" element1="/src\/main\/java&lt;com.cooksys.day_2" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1533571777627" subPackages="false" version="1.0"/>
+</session>

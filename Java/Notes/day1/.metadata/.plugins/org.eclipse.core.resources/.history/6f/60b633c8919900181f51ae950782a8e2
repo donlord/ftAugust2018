@@ -1,0 +1,11 @@
+package com.cooksys.day_1;
+
+public class ParkingLot {
+	private String name;
+	private ParkingSpace space;
+	
+	public ParkingLot () {
+		
+	}
+
+}

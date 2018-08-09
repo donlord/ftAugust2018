@@ -1,0 +1,16 @@
+package com.cooksys.day_2;
+
+public class Wind extends Instrument {
+	
+	int numKeys = 25;
+	
+	public Wind () {
+		super(120);
+	}
+
+	@Override
+	public String toString() {
+		return "Instrument [numKeys=" + super.numKeys + ", range=" + super.getRange() + "]";
+	}
+		
+}

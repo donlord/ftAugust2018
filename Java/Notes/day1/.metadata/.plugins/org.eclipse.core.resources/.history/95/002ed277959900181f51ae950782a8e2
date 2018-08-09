@@ -1,0 +1,18 @@
+package com.cooksys.day_1;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ParkingSpace space = new ParkingSpace();
+        ParkingLot atriumIIParking = new ParkingLot("Atrium II Parking Lot");
+        ParkingLot p1 = new ParkingLot("P1", space);
+        System.out.println(ParkingLot.getName());
+        System.out.println(ParkingLot.getName());
+        System.out.println(atriumIIParking.getSpace());
+    }
+}

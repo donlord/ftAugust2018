@@ -1,0 +1,44 @@
+package com.cooksys.day_3;
+
+public class Apple {
+	
+	private String color;
+	private String ripeness;
+	
+	public Apple(String color, String ripeness) {
+		this.color = color;
+		this.ripeness = ripeness;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getRipeness() {
+		return ripeness;
+	}
+
+	public void setRipeness(String ripeness) {
+		this.ripeness = ripeness;
+	}
+
+	@Override
+	public String toString() {
+		return "Apple";
+	}
+
+	@Override
+	public int hashCode() {
+		return 5;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return true;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.cooksys.day_2;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        Instrument i1 = new Instrument();
+        Instrument i2 = i1;
+        
+        i1.numKeys = 5;
+        System.out.println(i2.toString("hello"));
+    }
+}
