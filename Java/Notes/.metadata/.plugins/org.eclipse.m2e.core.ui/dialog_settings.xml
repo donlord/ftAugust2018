@@ -65,6 +65,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/wmarttala/Desktop/Current Work/ftAugust2018/Java/Notes/day-5/pom.xml"/>
+			<item value="/Users/wmarttala/Desktop/Current Work/ftAugust2018/Java/Notes/day-5/test.xsd"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -77,6 +79,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.cooksys.day_5"/>
+			<item value="com.cooksys.day_6"/>
+			<item value="com.cooksys"/>
 			<item value="com.cooksys.day_4"/>
 			<item value="com.cooksys.day_3"/>
 			<item value="com.cooksys.day_2"/>
@@ -85,6 +90,8 @@
 			<item value="com.cooksys"/>
 		</list>
 		<list key="artifactId">
+			<item value="day-5"/>
+			<item value="day-6"/>
 			<item value="day-4"/>
 			<item value="day-3"/>
 			<item value="day-2"/>

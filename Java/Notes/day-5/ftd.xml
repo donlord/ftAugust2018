@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ftd>
+	<students>
+		<student>Alex</student>
+		<student>Donny</student>
+		<student>Jacob</student>
+		<student>Jamil</student>
+		<student>Kirk</student>
+		<student>Zac</student>
+	</students>
+	<instructors>
+		<instructor>Will</instructor>
+		<instructor>Quinton</instructor>
+	</instructors>
+</ftd>

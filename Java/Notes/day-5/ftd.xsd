@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ftd" type="ftd"/>
+
+  <xs:element name="instructor" type="instructor"/>
+
+  <xs:element name="student" type="student"/>
+
+  <xs:complexType name="ftd">
+    <xs:sequence>
+      <xs:element name="students" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="student" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="instructors" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="instructor" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="student">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="instructor">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>
+
