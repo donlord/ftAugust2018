@@ -39,6 +39,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/wmarttala/Desktop/Current Work/ftAugust2018/Java/Assessment"/>
 			<item value="/Users/wmarttala/Desktop/3-collections"/>
 			<item value="/Users/wmarttala/Desktop/Current Work/ftAugust2018/Java/Notes/day1"/>
 			<item value="/Users/wmarttala/Desktop/assignment-1"/>
@@ -79,8 +80,11 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.cooksys.day_5"/>
+			<item value="com.cooksys.day_9"/>
+			<item value="com.cooksys.xsd"/>
+			<item value="com.cooksys.day_8"/>
 			<item value="com.cooksys.day_6"/>
+			<item value="com.cooksys.day_5"/>
 			<item value="com.cooksys"/>
 			<item value="com.cooksys.day_4"/>
 			<item value="com.cooksys.day_3"/>
@@ -90,8 +94,11 @@
 			<item value="com.cooksys"/>
 		</list>
 		<list key="artifactId">
-			<item value="day-5"/>
+			<item value="day-9"/>
+			<item value="xsd"/>
+			<item value="day-8"/>
 			<item value="day-6"/>
+			<item value="day-5"/>
 			<item value="day-4"/>
 			<item value="day-3"/>
 			<item value="day-2"/>

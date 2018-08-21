@@ -1,7 +1,0 @@
-package com.cooksys.day_2;
-
-public interface Instrument {
-
-	public void play (Instrument i);
-
-}

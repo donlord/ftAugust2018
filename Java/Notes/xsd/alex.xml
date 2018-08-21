@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+    <name>Library of FT</name>
+    <librarians>
+        <librarian salary="23043" age="50">Billy Rando Man</librarian>
+        <librarian salary="23043" age="50">Billy Rando Man</librarian>
+        <librarian salary="23043" age="50">Billy Rando Man</librarian>
+    </librarians>
+    <authors>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+        <author author="Rando">
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+            <book date="today" genre="Fiction">Book Name</book>
+        </author>
+    </authors>
+</library>

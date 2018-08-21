@@ -1,0 +1,612 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: DATABASE postgres; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON DATABASE postgres IS 'default administrative connection database';
+
+
+--
+-- Name: Assignment-6; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA "Assignment-6";
+
+
+ALTER SCHEMA "Assignment-6" OWNER TO postgres;
+
+--
+-- Name: SCHEMA "Assignment-6"; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA "Assignment-6" IS 'Fast-Track''D Assignment 6';
+
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: adminpack; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS adminpack WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION adminpack; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION adminpack IS 'administrative functions for PostgreSQL';
+
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: interest; Type: TABLE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE TABLE "Assignment-6".interest (
+    "Id" integer NOT NULL,
+    "Title" character varying NOT NULL
+);
+
+
+ALTER TABLE "Assignment-6".interest OWNER TO postgres;
+
+--
+-- Name: interest_Id_seq; Type: SEQUENCE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE SEQUENCE "Assignment-6"."interest_Id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "Assignment-6"."interest_Id_seq" OWNER TO postgres;
+
+--
+-- Name: interest_Id_seq; Type: SEQUENCE OWNED BY; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER SEQUENCE "Assignment-6"."interest_Id_seq" OWNED BY "Assignment-6".interest."Id";
+
+
+--
+-- Name: location; Type: TABLE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE TABLE "Assignment-6".location (
+    "Id" integer NOT NULL,
+    "City" character varying,
+    "State" character varying,
+    "Country" character varying
+);
+
+
+ALTER TABLE "Assignment-6".location OWNER TO postgres;
+
+--
+-- Name: location_Id_seq; Type: SEQUENCE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE SEQUENCE "Assignment-6"."location_Id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "Assignment-6"."location_Id_seq" OWNER TO postgres;
+
+--
+-- Name: location_Id_seq; Type: SEQUENCE OWNED BY; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER SEQUENCE "Assignment-6"."location_Id_seq" OWNED BY "Assignment-6".location."Id";
+
+
+--
+-- Name: person; Type: TABLE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE TABLE "Assignment-6".person (
+    "Id" integer NOT NULL,
+    "First_Name" character varying NOT NULL,
+    "Last_Name" character varying NOT NULL,
+    "Age" integer NOT NULL,
+    "Location" integer NOT NULL
+);
+
+
+ALTER TABLE "Assignment-6".person OWNER TO postgres;
+
+--
+-- Name: person_Id_seq; Type: SEQUENCE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE SEQUENCE "Assignment-6"."person_Id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "Assignment-6"."person_Id_seq" OWNER TO postgres;
+
+--
+-- Name: person_Id_seq; Type: SEQUENCE OWNED BY; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER SEQUENCE "Assignment-6"."person_Id_seq" OWNED BY "Assignment-6".person."Id";
+
+
+--
+-- Name: person_Location_seq; Type: SEQUENCE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE SEQUENCE "Assignment-6"."person_Location_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "Assignment-6"."person_Location_seq" OWNER TO postgres;
+
+--
+-- Name: person_Location_seq; Type: SEQUENCE OWNED BY; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER SEQUENCE "Assignment-6"."person_Location_seq" OWNED BY "Assignment-6".person."Location";
+
+
+--
+-- Name: person_interest; Type: TABLE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE TABLE "Assignment-6".person_interest (
+    "Id" integer NOT NULL,
+    person_id integer NOT NULL,
+    interest_id integer NOT NULL
+);
+
+
+ALTER TABLE "Assignment-6".person_interest OWNER TO postgres;
+
+--
+-- Name: person_interest_Id_seq; Type: SEQUENCE; Schema: Assignment-6; Owner: postgres
+--
+
+CREATE SEQUENCE "Assignment-6"."person_interest_Id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "Assignment-6"."person_interest_Id_seq" OWNER TO postgres;
+
+--
+-- Name: person_interest_Id_seq; Type: SEQUENCE OWNED BY; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER SEQUENCE "Assignment-6"."person_interest_Id_seq" OWNED BY "Assignment-6".person_interest."Id";
+
+
+--
+-- Name: Employee; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."Employee" (
+    id integer NOT NULL,
+    name character varying NOT NULL,
+    salary money NOT NULL
+);
+
+
+ALTER TABLE public."Employee" OWNER TO postgres;
+
+--
+-- Name: Manager; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."Manager" (
+    id integer NOT NULL,
+    name character varying NOT NULL,
+    salary money NOT NULL
+);
+
+
+ALTER TABLE public."Manager" OWNER TO postgres;
+
+--
+-- Name: Manager_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public."Manager_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Manager_id_seq" OWNER TO postgres;
+
+--
+-- Name: Manager_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public."Manager_id_seq" OWNED BY public."Manager".id;
+
+
+--
+-- Name: example_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.example_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.example_id_seq OWNER TO postgres;
+
+--
+-- Name: example_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.example_id_seq OWNED BY public."Employee".id;
+
+
+--
+-- Name: interest Id; Type: DEFAULT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".interest ALTER COLUMN "Id" SET DEFAULT nextval('"Assignment-6"."interest_Id_seq"'::regclass);
+
+
+--
+-- Name: location Id; Type: DEFAULT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".location ALTER COLUMN "Id" SET DEFAULT nextval('"Assignment-6"."location_Id_seq"'::regclass);
+
+
+--
+-- Name: person Id; Type: DEFAULT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person ALTER COLUMN "Id" SET DEFAULT nextval('"Assignment-6"."person_Id_seq"'::regclass);
+
+
+--
+-- Name: person Location; Type: DEFAULT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person ALTER COLUMN "Location" SET DEFAULT nextval('"Assignment-6"."person_Location_seq"'::regclass);
+
+
+--
+-- Name: person_interest Id; Type: DEFAULT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person_interest ALTER COLUMN "Id" SET DEFAULT nextval('"Assignment-6"."person_interest_Id_seq"'::regclass);
+
+
+--
+-- Name: Employee id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Employee" ALTER COLUMN id SET DEFAULT nextval('public.example_id_seq'::regclass);
+
+
+--
+-- Name: Manager id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Manager" ALTER COLUMN id SET DEFAULT nextval('public."Manager_id_seq"'::regclass);
+
+
+--
+-- Data for Name: interest; Type: TABLE DATA; Schema: Assignment-6; Owner: postgres
+--
+
+COPY "Assignment-6".interest ("Id", "Title") FROM stdin;
+1	golf
+2	tennis
+3	pingpong
+4	basketball
+5	videogames
+6	photography
+7	drinking
+8	bingewatchingnetflix
+9	football
+10	microtransactions
+11	programming
+12	reading
+13	hiking
+14	skydiving
+\.
+
+
+--
+-- Data for Name: location; Type: TABLE DATA; Schema: Assignment-6; Owner: postgres
+--
+
+COPY "Assignment-6".location ("Id", "City", "State", "Country") FROM stdin;
+1	Seoul	Gyeonggi-Do	South Korea
+2	Atlanta	Georiga	USA
+3	Memphis	Tennessee	USA
+4	Nashvilla	Tennessee	USA
+5	New York City	New York	USA
+\.
+
+
+--
+-- Data for Name: person; Type: TABLE DATA; Schema: Assignment-6; Owner: postgres
+--
+
+COPY "Assignment-6".person ("Id", "First_Name", "Last_Name", "Age", "Location") FROM stdin;
+1	Jacob	Hazelton	28	1
+2	Zac	Freeman	22	2
+3	Lala	Jabroni	45	3
+4	Pyat	Pree	438	4
+5	Jon	Snow	25	5
+6	XaroXhan	Daakhos	40	1
+7	Khal	Moran	33	2
+8	Tony	Soprano	44	3
+9	Alexi	Campbell	20	4
+10	Thoros	Myr	50	5
+11	Sandor	Clegane	44	1
+12	Gregor	Clegane	47	2
+13	Jorah	Mormont	47	3
+14	Eddard	Stark	46	4
+15	Robert	Barantheon	47	5
+\.
+
+
+--
+-- Data for Name: person_interest; Type: TABLE DATA; Schema: Assignment-6; Owner: postgres
+--
+
+COPY "Assignment-6".person_interest ("Id", person_id, interest_id) FROM stdin;
+1	1	3
+2	1	8
+3	1	13
+4	1	9
+5	6	3
+6	6	14
+7	6	6
+8	11	3
+9	11	14
+10	11	6
+11	2	4
+12	7	11
+13	12	9
+14	3	5
+15	3	12
+16	3	11
+17	7	4
+18	7	11
+19	7	9
+20	12	4
+21	12	11
+22	12	9
+23	8	5
+24	8	12
+25	8	1
+26	13	5
+27	13	12
+28	13	1
+29	4	2
+30	4	13
+31	4	4
+32	9	2
+33	9	13
+34	9	4
+35	14	2
+36	14	13
+37	14	4
+38	5	3
+39	5	14
+40	5	8
+41	10	3
+42	10	14
+43	10	8
+44	15	3
+45	15	14
+46	15	8
+\.
+
+
+--
+-- Data for Name: Employee; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."Employee" (id, name, salary) FROM stdin;
+1	Will\n	$2.00
+3	Alex	$0.00
+4	Jacob	$0.00
+5	Zac	$0.00
+6	Jamil	$0.00
+7	Donny	$0.00
+8	Kirk	$0.00
+2	Quinton	$4.00
+\.
+
+
+--
+-- Data for Name: Manager; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."Manager" (id, name, salary) FROM stdin;
+1	Yolanda	$1.00
+2	Peter\n	$4.00
+3	Yolanda	$100.00
+4	Peter	$50.00
+\.
+
+
+--
+-- Name: interest_Id_seq; Type: SEQUENCE SET; Schema: Assignment-6; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"Assignment-6"."interest_Id_seq"', 14, true);
+
+
+--
+-- Name: location_Id_seq; Type: SEQUENCE SET; Schema: Assignment-6; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"Assignment-6"."location_Id_seq"', 6, true);
+
+
+--
+-- Name: person_Id_seq; Type: SEQUENCE SET; Schema: Assignment-6; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"Assignment-6"."person_Id_seq"', 15, true);
+
+
+--
+-- Name: person_Location_seq; Type: SEQUENCE SET; Schema: Assignment-6; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"Assignment-6"."person_Location_seq"', 15, true);
+
+
+--
+-- Name: person_interest_Id_seq; Type: SEQUENCE SET; Schema: Assignment-6; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"Assignment-6"."person_interest_Id_seq"', 46, true);
+
+
+--
+-- Name: Manager_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."Manager_id_seq"', 4, true);
+
+
+--
+-- Name: example_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.example_id_seq', 9, true);
+
+
+--
+-- Name: interest interest_pkey; Type: CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".interest
+    ADD CONSTRAINT interest_pkey PRIMARY KEY ("Id");
+
+
+--
+-- Name: location location_pkey; Type: CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".location
+    ADD CONSTRAINT location_pkey PRIMARY KEY ("Id");
+
+
+--
+-- Name: person_interest person_interest_pkey; Type: CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person_interest
+    ADD CONSTRAINT person_interest_pkey PRIMARY KEY ("Id");
+
+
+--
+-- Name: person person_pkey; Type: CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person
+    ADD CONSTRAINT person_pkey PRIMARY KEY ("Id");
+
+
+--
+-- Name: Manager Manager_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Manager"
+    ADD CONSTRAINT "Manager_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Employee example_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Employee"
+    ADD CONSTRAINT example_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: person_interest interest_id_fk; Type: FK CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person_interest
+    ADD CONSTRAINT interest_id_fk FOREIGN KEY (interest_id) REFERENCES "Assignment-6".interest("Id");
+
+
+--
+-- Name: person_interest person_id_fk; Type: FK CONSTRAINT; Schema: Assignment-6; Owner: postgres
+--
+
+ALTER TABLE ONLY "Assignment-6".person_interest
+    ADD CONSTRAINT person_id_fk FOREIGN KEY (person_id) REFERENCES "Assignment-6".person("Id");
+
+
+--
+-- PostgreSQL database dump complete
+--
+

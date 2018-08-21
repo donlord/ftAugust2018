@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+	<name>Library of FT</name>
+	<librarians>
+		<Librarian salary="23043" age="50">Billy Rando Man</Librarian>
+		<Librarian salary="23043" age="50">Billy Rando Man</Librarian>
+		<Librarian salary="23043" age="50">Billy Rando Man</Librarian>
+	</librarians>
+	<authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+		<authors name="Rando">
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+			<book date="2018" genre="Fiction">Book Name</book>
+		</authors>
+	</authors>
+</library>

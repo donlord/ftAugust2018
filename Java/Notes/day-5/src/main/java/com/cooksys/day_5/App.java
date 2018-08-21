@@ -2,9 +2,7 @@ package com.cooksys.day_5;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -24,10 +22,9 @@ import com.cooksys.day_5.xsd.MySchemaOutputResolver;
  * Hello world!
  *
  */
-public class App 
-{
-	
-	public static Marshaller createMarshaller (JAXBContext context) {
+public class App {
+
+	public static Marshaller createMarshaller(JAXBContext context) {
 		try {
 			return context.createMarshaller();
 		} catch (JAXBException e) {
@@ -36,8 +33,8 @@ public class App
 		}
 		return null;
 	}
-	
-	public static Unmarshaller createUnmarshaller (JAXBContext context) {
+
+	public static Unmarshaller createUnmarshaller(JAXBContext context) {
 		try {
 			return context.createUnmarshaller();
 		} catch (JAXBException e) {
@@ -46,36 +43,35 @@ public class App
 		}
 		return null;
 	}
-	
-    public static void main( String[] args )
-    {
-    	JAXBContext context = null;
-        try {
+
+	public static void main(String[] args) {
+		JAXBContext context = null;
+		try {
 			context = JAXBContext.newInstance(Ftd.class, Student.class, Instructor.class);
 		} catch (JAXBException e) {
 			System.out.println("Failed to create JAXBContext");
 			e.printStackTrace();
 		}
-        
-        Marshaller m = createMarshaller(context);
-        Unmarshaller unMarshaller = createUnmarshaller(context);
-        
-        List<Student> students = new ArrayList<Student>();
-        students.add(new Student("Alex"));
-        students.add(new Student("Donny"));
-        students.add(new Student("Jacob"));
-        students.add(new Student("Jamil"));
-        students.add(new Student("Kirk"));
-        students.add(new Student("Zac"));
-        
-        List<Instructor> instructors = new ArrayList<Instructor>();
-        instructors.add(new Instructor("Will"));
-        instructors.add(new Instructor("Quinton"));
-        
-        Ftd ftd = new Ftd(students, instructors);
-        
-        try (Socket client = new Socket("localhost", 8080)) {
-        	m.setProperty(m.JAXB_FORMATTED_OUTPUT, true);
+
+		Marshaller m = createMarshaller(context);
+		Unmarshaller unMarshaller = createUnmarshaller(context);
+
+		List<Student> students = new ArrayList<Student>();
+		students.add(new Student("Alex"));
+		students.add(new Student("Donny"));
+		students.add(new Student("Jacob"));
+		students.add(new Student("Jamil"));
+		students.add(new Student("Kirk"));
+		students.add(new Student("Zac"));
+
+		List<Instructor> instructors = new ArrayList<Instructor>();
+		instructors.add(new Instructor("Will"));
+		instructors.add(new Instructor("Quinton"));
+
+		Ftd ftd = new Ftd(students, instructors);
+
+		try (Socket client = new Socket("localhost", 8080)) {
+			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			m.marshal(ftd, client.getOutputStream());
 		} catch (JAXBException e) {
 			System.out.println("Failed to marshel Ftd Object:");
@@ -90,8 +86,8 @@ public class App
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        
-        try {
+
+		try {
 			Ftd fastTrackd = (Ftd) unMarshaller.unmarshal(new FileInputStream("ftd.xml"));
 			System.out.println(fastTrackd);
 		} catch (JAXBException e) {
@@ -101,13 +97,13 @@ public class App
 			System.out.println("File not found:");
 			e.printStackTrace();
 		}
-        
-        try {
+
+		try {
 			context.generateSchema(new MySchemaOutputResolver("ftd.xsd"));
 		} catch (IOException e) {
 			System.out.println("Something when wrong when trying to create xsd File:");
 			e.printStackTrace();
 		}
-        
-    }
+
+	}
 }
